@@ -1,0 +1,146 @@
+[  
+  {
+    "src":"/portal-inmobiliario.png",
+    "id":"sticker-portal-inmobiliario",
+    "width": 190.55,
+    "height": 38.11
+  },
+  {
+    "src":"/mercado-libre.png",
+    "id":"mercado-libre",
+    "width": 187,
+    "height": 43    
+  },   
+  {
+    "src":"/icasas.png",
+    "id":"sticker-icasas",
+    "width": 96.71,
+    "height": 38.45
+  },  
+  {
+    "src":"/yapo.png",
+    "id":"sticker-yapo",
+    "width": 107.91,
+    "height": 30.92
+  },  
+  {
+    "src":"/goplaceit.png",
+    "id":"sticker-goplaceit",
+    "width": 132.72,
+    "height": 40.06
+  },  
+  {
+    "src":"/doomos.png",
+    "id":"sticker-doomos",
+    "width": 105.51,
+    "height": 23.78
+  },  
+  {
+    "src":"/toc-toc.png",
+    "id":"sticker-toc-toc",
+    "width": 76.17,
+    "height": 47.35
+  },  
+  {
+    "src":"/zoom.png",
+    "id":"sticker-zoom",
+    "width": 80.97,
+    "height": 35.13
+  },  
+  {
+    "src":"/portal-terreno.png",
+    "id":"sticker-portal-terreno",
+    "width": 150.36,
+    "height": 47.12
+  },  
+  {
+    "src":"/mi-segunda-vivienda.png",
+    "id":"mi-segunda-vivienda",
+    "width": 109,
+    "height": 34    
+  },  
+  {
+    "src":"/emol.png",
+    "id":"emol",
+    "width": 70,
+    "height": 41
+  },   
+  {
+    "src":"/mercurio.png",
+    "id":"mercurio",
+    "width": 182,
+    "height": 47.12 
+  },    
+  {
+    "src":"/acop.png",
+    "id":"acop",
+    "width": 96.71,
+    "height": 38.45
+  },  
+  {
+    "src":"/chile-propiedades.png",
+    "id":"chile-propiedades",
+    "width": 153,
+    "height": 39    
+  },  
+  {
+    "src":"/facebook.png",
+    "id":"sticker-facebook",
+    "width": 122,
+    "height": 44.68
+  },
+  {
+    "src":"/twitter.png",
+    "id":"sticker-twitter",
+    "width": 75,
+    "height": 41.56
+  },  
+  {
+    "src":"/whatsapp.png",
+    "id":"whatsapp",
+    "width": 156,
+    "height": 55    
+  },   
+  {
+    "src":"/trovit.png",
+    "id":"trovit",
+    "width": 93,
+    "height": 38    
+  },
+  {
+    "src":"/mitula.png",
+    "id":"mitula",
+    "width": 114,
+    "height": 23    
+  },
+  {
+    "src":"/nuroa.png",
+    "id":"sticker-nuroa",
+    "width": 75.29,
+    "height": 45.08
+  }, 
+  {
+    "src":"/flatfy.png",
+    "id":"flatfy",
+    "width": 98,
+    "height": 30    
+  },  
+  {
+    "src":"/bienes-online.png",
+    "id":"bienes-online",
+    "width": 162,
+    "height": 32    
+  },  
+  {
+    "src":"/locanto.png",
+    "id":"locanto",
+    "width": 114,
+    "height": 33    
+  },
+  {
+    "src":"/doplim.png",
+    "id":"doplim",
+    "width": 114,
+    "height": 33    
+  }  
+]
