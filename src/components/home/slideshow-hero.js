@@ -40,7 +40,7 @@ const SliderContainer = styled.div`
 const SlideImage = styled.div`
   width: 100%;
   height: calc(100vh - 95.38px);
-  background-image: url("${props => props.src}");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .5), transparent), url("${props => props.src}");
   background-size: cover;
   background-position: ${props => props.index === 0 ? "top" : "center"};
   @media(min-width: 768px){
@@ -52,12 +52,6 @@ const TitleCont = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  text-shadow:
-       1px 1px 0 #2e2e2e,
-     -1px -1px 0 #2e2e2e,  
-      1px -1px 0 #2e2e2e,
-      -1px 1px 0 #2e2e2e,
-       1px 1px 0 #2e2e2e;
 `
 const Title = styled.p`
   margin: 0;

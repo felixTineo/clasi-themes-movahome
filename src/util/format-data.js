@@ -255,7 +255,7 @@ export default (data) => {
         title:
           data.contact && data.contact.map && data.contact.map.title
             ? data.contact.map.title
-            : "Encuéntranos en Sucursal Chicureo Camino a Chicureo 2 km. esquina Los Ingleses Colina - Santiago",
+            : "Encuéntranos en sucursal " + data.address,
         subTitle:
           data.contact && data.contact.map && data.contact.map.subTitle
             ? data.contact.map.subTitle
@@ -264,7 +264,7 @@ export default (data) => {
       title:
         data.contact && data.contact.title
           ? data.contact.title
-          : "¿Dudas? ¿Consultas? Estamos aquí para ayudarlo.",
+          : "Déjanos tu mensaje y te responderemos a la brevedad.",
       subTitle:
         data.contact && data.contact.subTitle
           ? data.contact.subTitle

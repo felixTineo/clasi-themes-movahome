@@ -15,7 +15,7 @@ export default ()=> {
       <Hero />
       <History />
       <Description />
-      <Stats />
+{/*      <Stats />*/}
       <Team />
       <Ubication />
       <Contact />

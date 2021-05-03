@@ -19,7 +19,7 @@ const Header = styled.header`
 const Navigation = styled.nav`
   padding: 1rem 0;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
 `;
 const NavList = styled.ul`

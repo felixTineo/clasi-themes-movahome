@@ -41,7 +41,7 @@ export default ()=>{
   return(
     <SectionCustom id="properties">
         <Title>
-          {state.home.properties.title}
+          Movahome - Ofertas
         </Title>
         <PropertiesCarouselCont>
           <Carousel />
