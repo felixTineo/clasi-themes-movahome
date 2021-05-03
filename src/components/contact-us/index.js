@@ -70,7 +70,7 @@ export default ()=> {
 
       const data = await fetch("/sendmail.php", options);
       const result = await data.text();
-      
+      console.log("RESULT SENDMAIL", result);
       if(result === "success"){
         console.log("MAIL API RESULT", result);
         setLoading(false);
@@ -78,14 +78,14 @@ export default ()=> {
         setTimeout(()=> {
           setSuccess(false);
         }, 5000);
+        setValues({
+          name: '',
+          mobile: '',
+          email: '',
+          message: '',          
+        })                      
       }
       setLoading(false);
-      setValues({
-        name: '',
-        mobile: '',
-        email: '',
-        message: '',          
-      })              
     }catch(e){
       setLoading(false);
       console.log("error", e);

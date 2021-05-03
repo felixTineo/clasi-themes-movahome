@@ -6,7 +6,7 @@ import Link from "../components/link";
 
 import RateBar from "./ratebar";
 import Logo from "./logo";
-import { NavLink, NavButton } from "../styled-components";
+import { NavLink, Button } from "../styled-components";
 
 const Header = styled.header`
   background-color: ${(props) => props.theme.primaryColor};
@@ -29,7 +29,10 @@ const NavList = styled.ul`
   display: ${(props) => (props.horizontal ? "flex" : "block")};
   text-align: center;
 `;
-const NavItem = styled.li``;
+const NavItem = styled.li`
+  display: flex;
+  align-items: center;
+`;
 
 export default ({ dark }) => {
   const state = useContext(context);
@@ -45,7 +48,7 @@ export default ({ dark }) => {
           <NavList horizontal>
             <NavItem>
               <Link to="/about">
-                <NavLink dark={dark} light={!dark}>
+                <NavLink dark={dark} light={!dark} first>
                   Nosotros
                 </NavLink>
               </Link>
@@ -78,6 +81,13 @@ export default ({ dark }) => {
                 </NavLink>
               </Link>
             </NavItem>
+            <NavItem>
+              <Link to="/work">
+                <NavLink dark={dark} light={!dark}>
+                  ¡Trabaje con nosotros!
+                </NavLink>
+              </Link>
+            </NavItem>            
           </NavList>
         </Navigation>
       </Container>

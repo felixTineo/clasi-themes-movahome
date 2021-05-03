@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import context from '../../context';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'react-bootstrap';
+import context from '../../context';
 
 import { Section } from '../../styled-components';
 
 const MainCont = styled(Section)`
   background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("${props => props.src}");
   //background-attachment: fixed;
-  background-position: bottom;
+  background-position: center;
   background-size: cover;
   color: #fff;
   display: flex;
@@ -27,13 +27,13 @@ export default ()=> {
     <MainCont 
       first
       height="70vh"
-      src={state.about.hero.background}
+      src={require("../../images/venta.jpg")}
     >
       <Container>
         <Row>
           <Col xs={12} md={6}>
             <Title>
-              {state.about.hero.title}
+              Confienos su propiedad
             </Title>
           </Col>
         </Row>

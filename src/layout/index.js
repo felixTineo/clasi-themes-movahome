@@ -3,6 +3,7 @@ import Context from "../context";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import { Helmet } from "react-helmet";
 import { graphql, useStaticQuery } from "gatsby";
+import 'antd/dist/antd.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { formatData } from "../util";
 import {

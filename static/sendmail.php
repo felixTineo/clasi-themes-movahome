@@ -26,23 +26,24 @@
         $nameAgent = isset( $_POST['nameAgent']) && $_POST['nameAgent'] != "null" ? $_POST['nameAgent'] : '-';
                 
         $mensajeCompleto = 
-        "Recibiste una consulta desde liderarpropiedades<br>
+        "Recibiste una consulta desde Movahome web<br>
         <br>
         <b><u>Agente:</u> </b>".$nameAgent."<br/>
-        <b><u>Asunto:</u> </b>Recibiste una consulta desde propiedadesmyc.cl<br/>
+        <b><u>Asunto:</u> </b>Recibiste una consulta desde movahome.cl<br/>
         <b><u>Cliente:</u> </b>".$name."<br/>
         <b><u>Email:</u> </b><a href='mailto:".$email."'>".$email."</a><br/>
         <b><u>Celular:</u> </b>".$mobile."<br/><br/>
         <b><u>Mensaje:</u> </b>".$message."<br/><br/>
 
-        <a href='http://propiedadesmyc.cl/'>www.propiedadesmyc.cl.cl</a>
+        <a href='http://propiedadesmyc.cl/'>www.propiedadesmyc.cl</a>
         ";
         
         $mail->isSMTP();                     
-        $mail->Host = 'c2120007.ferozo.com';  
+        //$mail->Host = 'c2120007.ferozo.com';  
+        $mail->Host = 'smtp.gmail.com';  
         $mail->SMTPAuth = true;                
-        $mail->Username = 'contacto@propiedadesmyc.cl';
-        $mail->Password = 'MCCprop2021';                
+        $mail->Username = 'clasihomemailer@gmail.com';
+        $mail->Password = '18417052=Felix!';                
         $mail->SMTPSecure = 'ssl';                            
         $mail->Port = 465;          
         
@@ -54,6 +55,12 @@
         $mail->MsgHTML( $body );
         $mail->CharSet = 'UTF-8';
         $sendEmail = $mail->Send();
+
+        if($sendEmail){
+            echo("success");
+        } else{
+            echo("error enviando el mensaje");
+        }
 
         if($emailAgent != ''){
             $mail->SetFrom( $email , 'Un cliente quiere contactar contigo' );

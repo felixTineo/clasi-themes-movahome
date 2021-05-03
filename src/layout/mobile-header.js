@@ -112,6 +112,13 @@ export default ()=> {
             </NavLink>
           </Link>
         </NavItem>                
+        <NavItem>
+          <Link to="/work" onClick={()=> setOpen(false)} >
+            <NavLink light>
+              ¡Trabaje con nosotros!
+            </NavLink>
+          </Link>
+        </NavItem>                        
       </NavList>
       <NavList horizontal>
         <NavItem>

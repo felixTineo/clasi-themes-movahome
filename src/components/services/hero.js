@@ -18,6 +18,7 @@ const MainCont = styled(Section)`
 `
 const Title = styled.h2`
   //width: 50%;
+  color: #fff;
 `
 
 export default ()=> {
