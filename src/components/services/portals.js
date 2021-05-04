@@ -26,7 +26,7 @@ const Box = styled.div`
   //height: 100px;
   background-color: transparent;
   display: flex;
-  //justify-content: center;
+  justify-content: center;
   align-items: center;
   font-size: 2rem;
   color: #fff;
@@ -38,8 +38,6 @@ const Box = styled.div`
   //padding-top: 2rem;
 `
 const Logo = styled.img`
-  width: 60%;
-  height: 100px;
   object-fit: contain;
   object-position: center;
   //filter: grayscale(1);
@@ -88,7 +86,7 @@ export default ()=> {
       {
         PORTALS.map((item, i) => (
           <Box key={uuid()} className="box">
-            <Logo src={item.src} alt={item.id} />
+            <Logo width={item.width} height={item.height} src={item.src} alt={item.id} />
           </Box>          
         ))
       }
