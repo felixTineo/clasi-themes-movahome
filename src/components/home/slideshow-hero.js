@@ -40,7 +40,7 @@ const SliderContainer = styled.div`
 const SlideImage = styled.div`
   width: 100%;
   height: calc(100vh - 95.38px);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, .5), transparent), url("${props => props.src}");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .3), transparent), url("${props => props.src}");
   background-size: cover;
   background-position: ${props => props.index === 0 ? "top" : "center"};
   @media(min-width: 768px){
