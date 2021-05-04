@@ -52,7 +52,7 @@ export default ()=> {
       <Container>
         <Row style={{ marginBottom: "8rem" }}>
           <Col xs={12} md={6}>
-            <Image src={require("../../images/venta.jpg")} />
+            <Image style={{ clipPath: "polygon(0 0, 100% 0, 100% 75%, 0 100%)" }} src={require("../../images/venta.jpg")} />
           </Col>                    
           <Col xs={12} md={6}>
             <Title>Ventas</Title>
@@ -123,12 +123,12 @@ export default ()=> {
             </List>
           </Col>          
           <Col xs={{ span: 12, order: 1 }} md={{ span: 6, order: 2 }}>
-            <Image src={require("../../images/arriendo.jpg")} />
+            <Image style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 75%)" }} src={require("../../images/arriendo.jpg")} />
           </Col>                
         </Row>
         <Row style={{ marginBottom: "8rem" }}>
           <Col xs={12} md={6}>
-            <Image src={require("../../images/complementarios.jpg")} />
+            <Image style={{ clipPath: "polygon(0 0, 100% 0, 100% 75%, 0 100%)" }} src={require("../../images/complementarios.jpg")} />
           </Col>             
           <Col xs={12} md={6}>
             <Title>Servicios Complementarios</Title>

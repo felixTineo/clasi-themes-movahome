@@ -7,6 +7,11 @@ import { Section } from '../../styled-components';
 
 const SectionCustom = styled(Section)`  
   margin-bottom: 0;
+  position: relative;
+`
+const FormCont = styled.div`
+  position: absolute;
+  top: -90px;
 `
 
 const Title = styled.h2`
@@ -16,10 +21,12 @@ const Title = styled.h2`
 export default ()=> {
 
   return(
+    <Container style={{ padding: 0 }}>
     <SectionCustom>
-      <Container style={{ padding: 0 }}>
-        <Properties />
-      </Container>
+        <FormCont>
+          <Properties />
+        </FormCont>
     </SectionCustom>
+    </Container>
   )
 }

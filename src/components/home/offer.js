@@ -10,6 +10,10 @@ import Carousel from '../carousels/offer-properties';
 
 const SectionCustom = styled(Section)`
   margin: 2rem 0;
+  padding-top: 30rem;
+  @media(min-width: 768px){
+    padding-top: 5rem;
+  }
 `
 
 const Title = styled.p`

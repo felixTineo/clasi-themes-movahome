@@ -11,10 +11,10 @@ import Map from '../components/map';
 
 const Footer = styled.footer`
   padding: 1rem 0 0;
-  background-color: rgba(0, 0, 0, .070);
+  background-color: ${props => props.theme.primaryColor};
 `
 const FooterText = styled.p`
-  color: gray;
+  color: rgba(255, 255, 255, .5);
   font-size: .8rem;
   text-align: justify;
 `
@@ -25,7 +25,7 @@ const InfoList = styled.ul`
   margin-top: 1rem;
 `
 const InfoItem = styled.li`
-  color: gray;
+  color: rgba(255, 255, 255, .5);
   font-size: .8rem;
   margin-bottom: .5rem;
   display: flex;
@@ -35,7 +35,7 @@ const InfoItem = styled.li`
   }
 `
 const InfoLink = styled.a`
-  color: gray !important;
+  color: rgba(255, 255, 255, .5) !important;
   &:hover{
     text-decoration: underline !important;
   }
@@ -65,11 +65,11 @@ const SocialCont = styled.div`
   }
 `
 const SocialItem = styled.span`
-  color: ${props => props.icon ? "#fff" : "gray"};
+  color: ${props => props.icon ? "#fff" : "rgba(255, 255, 255, .5)"};
   font-size: .8rem;
 `
 const SocialLink = styled.a`
-  color: gray;
+  color: rgba(255, 255, 255, .5);
   margin-left: .5rem;
   &:hover{
     color: ${props => props.theme.primaryColor};
@@ -129,7 +129,7 @@ export default ()=> {
         <Row className="align-items-center">
           <Col xs={{ span: 6, order: 6 }} md={{ span: 6, order: 0 }} lg={4}>
             <Link to="/">
-              <Logo dark />
+              <Logo />
             </Link>
             <InfoList>
               {
@@ -177,35 +177,35 @@ export default ()=> {
               <NavList>
                 <NavItem>
                   <Link to="/about">
-                    <NavLink first>
+                    <NavLink first light>
                       Nosotros
                     </NavLink>
                   </Link>            
                 </NavItem>                           
                 <NavItem>
                   <Link to="/properties">
-                    <NavLink>
+                    <NavLink light>
                       Propiedades
                     </NavLink>
                   </Link>            
                 </NavItem>       
                 <NavItem>
                   <Link to="/services">
-                    <NavLink>
+                    <NavLink light>
                       Servicos
                     </NavLink>
                   </Link>            
                 </NavItem>                                         
                 <NavItem>
                   <Link to="/contact">
-                    <NavLink >
+                    <NavLink light>
                       Contacto
                     </NavLink>
                   </Link>                                    
                 </NavItem>
                 <NavItem>
                   <Link href={`http://app.clasihome.com/login?logo=${state.logo}&primaryColor=${state.primaryColor.substring(1)}`} target="_blank" rel="noopener">
-                    <NavLink >
+                    <NavLink light>
                       Login
                     </NavLink>
                   </Link>            

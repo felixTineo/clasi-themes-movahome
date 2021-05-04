@@ -14,19 +14,20 @@ const VeryMainCont = styled.section`
 const MainCont = styled.div`
   display: flex;
   position: relative;
-  left: -500px;
-  width: calc(100% + 500px);
+  left: -200px;
+  width: calc(100% + 200px);
   padding: 3rem 0;
   overflow: hidden;
 `
 
 const Box = styled.div`
-  width: 500px;
+  width: 200px;
+  height: 100%;
   //height: 100px;
   background-color: transparent;
-  //display: flex;
+  display: flex;
   //justify-content: center;
-  //align-items: center;
+  align-items: center;
   font-size: 2rem;
   color: #fff;
   flex-grow: 1;
@@ -37,7 +38,7 @@ const Box = styled.div`
   //padding-top: 2rem;
 `
 const Logo = styled.img`
-  width: 40%;
+  width: 60%;
   height: 100px;
   object-fit: contain;
   object-position: center;
@@ -63,13 +64,13 @@ export default ()=> {
 
   useEffect(()=>{
     gsap.set(".box", {
-      x: (i) => i * 500,
+      x: (i) => i * 200,
     });
-    const mod = gsap.utils.wrap(0, 500 * 24);
+    const mod = gsap.utils.wrap(0, 200 * 24);
     const tween = gsap.to(".box",{
       paused: true,
       duration: 120,
-      x: "-=" + (500 * 24),
+      x: "-=" + (200 * 24),
       ease: "linear",
       //paused: true,
       repeat: -1,

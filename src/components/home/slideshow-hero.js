@@ -34,7 +34,7 @@ const SliderContainer = styled.div`
   background-size: cover;
   background-position: center;
   @media(min-width: 768px){
-    height: calc(100vh - 166.7px - 121.78px);
+    height: calc(85vh - 166.7px - 121.78px);
   }
 `
 const SlideImage = styled.div`
@@ -44,7 +44,7 @@ const SlideImage = styled.div`
   background-size: cover;
   background-position: ${props => props.index === 0 ? "top" : "center"};
   @media(min-width: 768px){
-    height: calc(100vh - 153.38px);
+    height: calc(85vh - 153.38px);
   }
 `
 const TitleCont = styled.div`
@@ -72,17 +72,8 @@ const DotsCont = styled.div`
   flex-direction: column;
   justify-content: center;
   @media(min-width: 768px){
-    height: auto;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;    
-    flex-direction: row;
-    justify-content: center;
-    button + button{
-    margin-left: 1rem;
-  }
+    right: auto;
+    left: 1rem;
   }
 `
 const CustonDot = styled(Dot)`
@@ -94,12 +85,6 @@ const CustonDot = styled(Dot)`
   height: 15px;
   border-radius: 50%;
   margin-bottom: .5rem;
-  @media(min-width: 768px){
-    border-radius: 0;
-    width: 100px !important;
-    height: 6px;
-    margin-bottom: .5rem;
-  }
   &:disabled{
     background: #fff;
   }

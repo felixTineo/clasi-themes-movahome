@@ -75,27 +75,3 @@ export default () => {
     </MainCont>
   );
 };
-
-/*
-      <Container>
-        <Title id="title" dangerouslySetInnerHTML={{ __html: state.home.hero.title }} />
-        <SearchOptionCont id="search">
-          <SearchOption active={!byCode} onClick={()=> setByCode(false)}>
-            Buscar propiedad
-            <ButtonLine active={!byCode} />
-          </SearchOption>
-          <SearchOption active={byCode} onClick={()=> setByCode(true)}>
-            Buscar por código
-            <ButtonLine active={byCode} />
-          </SearchOption>          
-        </SearchOptionCont>
-        {
-          byCode          
-          ?<FormCode />
-          :<FormProperty id="formSearch" />
-        }
-      </Container>
-      <DownLink id="downButton" href="#properties">
-        <DownOutlined />
-      </DownLink>
-*/

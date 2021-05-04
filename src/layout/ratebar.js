@@ -12,7 +12,7 @@ const MainCont = styled.div`
   font-size: 1rem;
   @media (min-width: 992px) {
     font-size: 0.7rem;
-    background-color: ${(props) => props.theme.secondaryColor};
+    background-color: #313f4d;
   }
 `;
 
