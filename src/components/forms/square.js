@@ -15,8 +15,10 @@ const Form = styled.form`
   border: 1px solid #dedede;
   padding: 1rem 2rem;
   padding-top: 2rem;
-  background-color: #fff;
+  background-color: #f2f2f2;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, .25);
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
 `
 
 
@@ -53,7 +55,7 @@ export default ({ column })=> {
   return(
     <Form>
       <Row>
-        <Col xs={12} md={column ? 12 : 3}>
+        <Col xs={12} md={column ? 12 : 3} style={{ marginBottom: "1rem" }}>
           <Select
             id="propertyType"
             onChange={onChange}
@@ -64,7 +66,7 @@ export default ({ column })=> {
             capitalize
           />    
         </Col>
-        <Col xs={12} md={column ? 12 : 3}>
+        <Col xs={12} md={column ? 12 : 3} style={{ marginBottom: "1rem" }}>
           <Autocomplete
             id="commune"
             onSelect={onChange}
@@ -73,7 +75,7 @@ export default ({ column })=> {
             placeholder="Comuna"
           />             
         </Col>
-        <Col xs={12} md={column ? 12 : 3}>
+        <Col xs={12} md={column ? 12 : 3} style={{ marginBottom: "1rem" }}>
           <Select
             id="operation"
             onChange={onChange}        
@@ -84,7 +86,7 @@ export default ({ column })=> {
             capitalize
           />            
         </Col>
-        <Col xs={12} md={column ? 12 : 3}>
+        <Col xs={12} md={column ? 12 : 3} style={{ marginBottom: "1rem" }}>
           <Select
             id="currency"
             onChange={onChange}
@@ -95,7 +97,7 @@ export default ({ column })=> {
             noAll
           />           
         </Col>
-        <Col xs={12} md={column ? 12 : 3}>
+        <Col xs={12} md={column ? 12 : 3} style={{ marginBottom: "1rem" }}>
           <Input
             id="priceMin"
             onChange={onChange}
@@ -106,7 +108,7 @@ export default ({ column })=> {
             min={0}
           />          
         </Col>
-        <Col xs={12} md={column ? 12 : 3}>
+        <Col xs={12} md={column ? 12 : 3} style={{ marginBottom: "1rem" }}>
           <Input
             id="priceMax"
             onChange={onChange}
@@ -117,7 +119,7 @@ export default ({ column })=> {
             min={0}
           />          
         </Col>
-        <Col xs={12} md={column ? 12 : 3}>
+        <Col xs={12} md={column ? 12 : 3} style={{ marginBottom: "1rem" }}>
           <Autocomplete
             id="stringSearch"
             onSelect={onChange}
@@ -126,7 +128,7 @@ export default ({ column })=> {
             icon
           />              
         </Col>      
-        <Col xs={12} md={column ? 12 : 3}  >
+        <Col xs={12} md={column ? 12 : 3}  style={{ marginBottom: "1rem" }}>
           <AniLink fade to={getUrl()} duration={.5}>
             <Button
               block

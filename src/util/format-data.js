@@ -4,7 +4,7 @@ export default (data) => {
     typeId: data.user ? "user" : "office",
     officeId: data.user ? data.user : data.office,
     primaryColor: data.primaryColor ? data.primaryColor : "#dc314f",
-    secondaryColor: "#A99A62",
+    secondaryColor: "#a99a62",
     address: data.address
       ? data.address
       : "chile, santiago. Av 1 calle 2 local 1a",

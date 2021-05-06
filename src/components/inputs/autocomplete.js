@@ -12,12 +12,12 @@ const InputLabel = styled.label`
   align-items: center;
   height: 44px;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: .2rem;
   //border: ${props => props.gray ? "1px solid #000000" : "none" };
   border: 1px solid #cdcdcd;
   padding-right: 16px;
   color: ${props => props.primary ? props.theme.primaryColor : "#212121"};
-  //border-radius: 6px;
+  border-radius: .3rem;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, .12), 0px 0px 2px rgba(0, 0, 0, .12), 0px 4px 4px rgba(0, 0, 0, .12), 0px 8px 8px rgba(0, 0, 0, .12);
   @media(min-width: 768px){
     //margin-bottom: ${props => props.vertical ? "1rem" : "0"};

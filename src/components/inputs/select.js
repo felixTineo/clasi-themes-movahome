@@ -26,7 +26,7 @@ const Select = styled.select`
   -moz-appearance: none;
   appearance: none; 
   background-color: #fff;
-  //border-radius: 6px;
+  border-radius: .3rem;
   padding: 5px;
   height: 44px;
   width: 100%;
@@ -36,7 +36,7 @@ const Select = styled.select`
   : `url('data:image/svg+xml;utf8,<svg stroke="%23FFFFFF" width="28" height="6.633" fill="none" version="1.1" viewBox="0 0 28 6.633" xmlns="http://www.w3.org/2000/svg"><path d="m11.368 0.63261-5.3678 5.3678-5.3678-5.3678"/></svg>')`};
   background-repeat: no-repeat;
   background-position: right center;
-  margin-bottom: 1rem;
+  margin-bottom: .2rem;
   color: #878787;
   cursor: pointer;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, .12), 0px 0px 2px rgba(0, 0, 0, .12), 0px 4px 4px rgba(0, 0, 0, .12), 0px 8px 8px rgba(0, 0, 0, .12);

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container } from 'react-bootstrap';
+import { SearchOutlined } from "@ant-design/icons";
 
 import Properties from '../forms/square';
 import { Section } from '../../styled-components';
@@ -11,19 +12,39 @@ const SectionCustom = styled(Section)`
 `
 const FormCont = styled.div`
   position: absolute;
-  top: -90px;
+  top: calc((-235.78px / 2) - 25px);
+  opacity: .9;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  border-radius: .3rem;
 `
 
 const Title = styled.h2`
 
 `
+const SearchTitle = styled.div`
+  color: ${props => props.theme.secondaryColor};
+  border-radius: .3rem;
+  background-color: #2e2e2e;
+  padding: .8rem 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  span + span{
+    margin-left: .5rem;
+  }
+`;
 
 export default ()=> {
 
   return(
-    <Container style={{ padding: 0 }}>
+    <Container style={{ padding: 0 }} fluid>
     <SectionCustom>
         <FormCont>
+          <SearchTitle>
+            <SearchOutlined />
+            <span>BUSCAR PROPIEDAD</span>
+          </SearchTitle>          
           <Properties />
         </FormCont>
     </SectionCustom>

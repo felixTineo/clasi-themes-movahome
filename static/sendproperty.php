@@ -19,8 +19,14 @@
         var_dump($_POST);
         $subject = isset( $_POST['subject']) ? $_POST['subject'] : 'contacto';
         $name = isset( $_POST['name'] ) ? $_POST['name'] : '';
-        $mobile = isset( $_POST['mobile'] ) ? $_POST['mobile'] : '';
         $email = isset( $_POST['email'] ) ? $_POST['email'] : '';
+        $phone = isset( $_POST['phone'] ) ? $_POST['phone'] : '';
+        $operation = isset( $_POST['operation'] ) ? $_POST['operation'] : '';
+        $propertyType = isset( $_POST['propertyType'] ) ? $_POST['propertyType'] : '';
+        $observations = isset( $_POST['observations'] ) ? $_POST['observations'] : '';
+        $commune = isset( $_POST['commune'] ) ? $_POST['commune'] : '';
+        $images = isset( $_POST['images'] ) ? $_POST['images'] : [];
+        
         $message = isset( $_POST['message']) ? $_POST['message'] : '';
         $emailAgent = isset( $_POST['emailAgent']) && $_POST['emailAgent'] != "null" ? $_POST['emailAgent']: '';
         $nameAgent = isset( $_POST['nameAgent']) && $_POST['nameAgent'] != "null" ? $_POST['nameAgent'] : '-';
@@ -32,7 +38,7 @@
         <b><u>Asunto:</u> </b>Recibiste una consulta desde movahome.cl<br/>
         <b><u>Cliente:</u> </b>".$name."<br/>
         <b><u>Email:</u> </b><a href='mailto:".$email."'>".$email."</a><br/>
-        <b><u>Celular:</u> </b>".$mobile."<br/><br/>
+        <b><u>Celular:</u> </b>".$phone."<br/><br/>
         <b><u>Mensaje:</u> </b>".$message."<br/><br/>
 
         <a href='http://propiedadesmyc.cl/'>www.propiedadesmyc.cl</a>

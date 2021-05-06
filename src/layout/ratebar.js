@@ -8,11 +8,12 @@ const MainCont = styled.div`
   padding: 0;
   user-select: none;
   background-color: transparent;
-  color: #fff;
+  color: #a99a62;
   font-size: 1rem;
   @media (min-width: 992px) {
     font-size: 0.7rem;
-    background-color: #313f4d;
+    background-color: ${props => props.theme.primaryColor};
+    border-bottom: 1px solid #585858;
   }
 `;
 
@@ -28,6 +29,8 @@ const InnerCont = styled.div`
 
 const ContactCont = styled.div`
   display: none;
+  color: #fff !important;
+  font-weight: bold;
   @media (min-width: 992px) {
     display: block;
   }
@@ -139,7 +142,7 @@ export default () => {
   if (query.loading)
     return (
       <MainCont>
-        <Container>
+        <Container fluid>
           <InnerCont>
             <ContactCont>¿Necesitas ayuda? contactanos</ContactCont>
             <RatesCont>
@@ -171,7 +174,7 @@ export default () => {
 
   return (
     <MainCont>
-      <Container>
+      <Container fluid>
         <InnerCont>
           <ContactCont>
             ¿Necesitas ayuda? contactanos{" "}

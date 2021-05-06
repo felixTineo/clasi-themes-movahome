@@ -13,17 +13,19 @@ const Form = styled.form`
 `
 const Title = styled.h2`
   color: ${props => props.theme.secondaryColor};
+  margin: 1rem 0;
 `
 const ButtonCont = styled.footer`
   display: flex;
   justify-content: flex-end;
+  margin: 0 1rem 2rem 0;
 `
 
 export default ()=> {
   const [values, setValues] = useReducer((current, next) => ({ ...current, ...next }), {
     name: "",
     email: "",
-    mobile: "",
+    phone: "",
     operation: "",
     propertyType: "",
     observations: "",
@@ -31,9 +33,38 @@ export default ()=> {
     images: [],
   });
 
-  const onSubmit = (e)=> {
+  const onSubmit = async(e)=> {
     e.preventDefault();
-    console.log(values);
+    /*try{
+      const options = {
+        headers: { "Content-type" : "application/json" },
+        method: "POST",
+        body: JSON.stringify(values),
+        mode: "cors",
+      }
+
+      const data = await fetch("/sendproperty.php", options);
+      const result = await data.text();
+      console.log("RESULT SENDMAIL", result);
+      if(result === "success"){
+        console.log("MAIL API RESULT", result);
+        setLoading(false);
+        setSuccess(true);
+        setTimeout(()=> {
+          setSuccess(false);
+        }, 5000);
+        setValues({
+          name: '',
+          phone: '',
+          email: '',
+          message: '',          
+        })                      
+      }
+      setLoading(false);
+    }catch(e){
+      setLoading(false);
+      console.log("error", e);
+    }*/
   }
 
   return(
@@ -69,10 +100,10 @@ export default ()=> {
             placeholder="Teléfono"
             gray
             withMargin
-            id="mobile"
+            id="phone"
             //disabled={loading}
-            onChange={(e)=>setValues({ mobile: e.target.value })}
-            value={values.mobile}
+            onChange={(e)=>setValues({ phone: e.target.value })}
+            value={values.phone}
           />          
         </Col>      
         <Col xs={12}>
@@ -98,6 +129,15 @@ export default ()=> {
           />           
         </Col>
         <Col xs={12}>
+          <Autocomplete
+            id="commune"
+            onSelect={(e)=>setValues({ commune: e.target.value })}
+            selected={values.commune}
+            options={COMMUNES.map(val => val.name)}
+            placeholder="Comuna"
+          />              
+        </Col>        
+        <Col xs={12}>
           <Textarea
             id="observations"
             rows="4"
@@ -109,15 +149,6 @@ export default ()=> {
             value={values.observations}                                   
           />          
         </Col>       
-        <Col xs={12}>
-          <Autocomplete
-            id="commune"
-            onSelect={(e)=>setValues({ commune: e.target.value })}
-            selected={values.commune}
-            options={COMMUNES.map(val => val.name)}
-            placeholder="Comuna"
-          />              
-        </Col>
         <Col xs={12}>
           <Upload
             handleChange={setValues}

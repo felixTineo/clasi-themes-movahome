@@ -66,11 +66,11 @@ export default () => {
   return (
     <MainCont src={state.home.hero.background} first height="100vh">
       <SlideShow />
-      <Container style={{ position: "relative" }}>
-        <SearchTitle>
+      <Container style={{ position: "relative" }} fluid>
+{/*        <SearchTitle>
           <SearchOutlined />
           <span>BUSCAR PROPIEDAD</span>
-        </SearchTitle>
+</SearchTitle>*/}
       </Container>
     </MainCont>
   );

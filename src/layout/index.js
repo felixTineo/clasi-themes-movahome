@@ -273,7 +273,7 @@ export default ({ children, location }) => {
           </Helmet>
           <GlobalStyles />
           <MobileHeader />
-          <DesktopHeader />
+          <DesktopHeader location={location.pathname} />
           {children}
           <ContactButton
             title="Enviar WhatsApp"

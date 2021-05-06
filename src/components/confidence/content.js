@@ -9,13 +9,14 @@ import Map from '../map';
 import Form from '../forms/confidence';
 
 const SectionCustom = styled(Section)`
-
+  
 `
 const Title = styled.h2`
   color: ${props => props.theme.secondaryColor};
+  margin: 1rem 0;
 `
 const Description = styled.p`
-
+  text-align: justify;
 `
 const ContactCont = styled.footer`
   color: gray;
@@ -49,7 +50,14 @@ export default ()=> {
   return(
     <SectionCustom>
       <Container>
-        <Row>
+        <Row
+          style={{
+            border: "1px solid #d8d8d8",
+            padding: "0 .5rem",
+            backgroundColor: "#fff",
+            borderRadius: ".3rem"
+          }}
+        >
           <Col xs={12} md={6}>
             <Title>Publica tu propiedad</Title>
             <Description>
@@ -88,6 +96,12 @@ export default ()=> {
                 </ContactItem>
               </ContactList>
             </ContactCont>
+            <div
+              style={{
+                border: "1px solid #d8d8d8",
+                borderRadius: ".3rem"
+              }}
+            >
             {
               state.lat && (
                 <Map
@@ -98,6 +112,7 @@ export default ()=> {
               />         
               )
             }      
+            </div>
           </Col>
           <Col xs={12} md={6}>
             <Form />

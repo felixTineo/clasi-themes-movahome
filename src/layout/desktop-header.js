@@ -19,8 +19,9 @@ const Header = styled.header`
 const Navigation = styled.nav`
   padding: 1rem 0;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
+  font-size: .8rem;
 `;
 const NavList = styled.ul`
   list-style: none;
@@ -34,13 +35,13 @@ const NavItem = styled.li`
   align-items: center;
 `;
 
-export default ({ dark }) => {
+export default ({ dark, location }) => {
   const state = useContext(context);
-
+  console.log("LOCATION-PATH", location === "/about");
   return (
     <Header className="d-none d-lg-block">
       <RateBar />
-      <Container>
+      <Container fluid>
         <Navigation>
           <Link to="/">
             <Logo dark={dark} light={!dark} />
@@ -48,42 +49,42 @@ export default ({ dark }) => {
           <NavList horizontal>
             <NavItem>
               <Link to="/about">
-                <NavLink dark={dark} light={!dark} first>
+                <NavLink active={location === "/about"} dark={dark} light={!dark} first>
                   Nosotros
                 </NavLink>
               </Link>
             </NavItem>            
             <NavItem>
               <Link to="/properties">
-                <NavLink dark={dark} light={!dark}>
+                <NavLink active={location === "/properties"} dark={dark} light={!dark}>
                   Propiedades
                 </NavLink>
               </Link>
             </NavItem>
             <NavItem>
               <Link to="/services">
-                <NavLink dark={dark} light={!dark}>
+                <NavLink active={location === "/services"} dark={dark} light={!dark}>
                   Servicios
                 </NavLink>
               </Link>
             </NavItem>           
             <NavItem>
               <Link to="/confidence">
-                <NavLink dark={dark} light={!dark}>
+                <NavLink active={location === "/confidence"} dark={dark} light={!dark}>
                   Confienos su propiedad
                 </NavLink>
               </Link>
             </NavItem>             
             <NavItem>
               <Link to="/contact">
-                <NavLink dark={dark} light={!dark}>
+                <NavLink active={location === "/contact"} dark={dark} light={!dark}>
                   Contacto
                 </NavLink>
               </Link>
             </NavItem>
             <NavItem>
               <Link to="/work">
-                <NavLink dark={dark} light={!dark}>
+                <NavLink active={location === "/work"} dark={dark} light={!dark}>
                   ¡Trabaje con nosotros!
                 </NavLink>
               </Link>
