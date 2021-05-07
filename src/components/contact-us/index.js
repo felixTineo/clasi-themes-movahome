@@ -11,10 +11,8 @@ const Form = styled.form`
 
 `
 const Title = styled.h2`
-  padding: 2rem 0;
-  @media(min-width: 768px){
-    width: 50%;
-  }
+  text-align: center;
+  padding: 3rem 0;
 `
 const SubTitle = styled.p`
   color: gray;
@@ -94,7 +92,16 @@ export default ()=> {
     
   return(
     <Section first>
-      <Container>
+      <Container
+          style={{
+            border: "1px solid #d8d8d8",
+            padding: "0 .5rem",
+            backgroundColor: "#fff",
+            borderRadius: ".3rem",
+            padding: "0 3rem 3rem",
+            marginTop: "2.5rem"
+          }}      
+      >
         <Title>
           {state.contact.title}
         </Title>

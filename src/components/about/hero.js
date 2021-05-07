@@ -8,7 +8,7 @@ import { Section } from '../../styled-components';
 const MainCont = styled(Section)`
   background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("${props => props.src}");
   //background-attachment: fixed;
-  background-position: bottom;
+  background-position: center;
   background-size: cover;
   color: #fff;
   display: flex;
@@ -26,8 +26,8 @@ export default ()=> {
   return(
     <MainCont 
       first
-      height="70vh"
-      src={state.about.hero.background}
+      height="45vh"
+      src={require("../../images/about-hero.jpg")}
     >
       <Container>
         <Row>

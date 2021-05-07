@@ -15,6 +15,7 @@ const MainCont = styled(Section)`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin-bottom: 3rem;
 `
 const Title = styled.h2`
   //width: 50%;

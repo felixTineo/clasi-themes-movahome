@@ -49,7 +49,14 @@ export default ()=> {
   return(
     <SectionCustom>
       <Container>
-        <Row>
+        <Row
+          style={{
+            border: "1px solid #d8d8d8",
+            padding: "2.5rem 3rem;",
+            backgroundColor: "#fff",
+            borderRadius: ".3rem"
+          }}        
+        >
           <Col xs={12} md={6}>
             <Title>Complete el formulario y nos contactaremos a la brevedad</Title>
             <ContactCont>
@@ -85,6 +92,12 @@ export default ()=> {
                 </ContactItem>
               </ContactList>
             </ContactCont>
+            <div
+              style={{
+                border: "1px solid #d8d8d8",
+                borderRadius: ".3rem"
+              }}
+            >
             {
               state.lat && (
                 <Map
@@ -94,7 +107,8 @@ export default ()=> {
                 zoom={15}
               />         
               )
-            }      
+            }     
+            </div> 
           </Col>
           <Col xs={12} md={6}>
             <Form />

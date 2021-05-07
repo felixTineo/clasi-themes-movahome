@@ -14,9 +14,9 @@ const Title = styled.p`
   background-color: ${props => props.theme.primaryColor};
   padding: 1rem;
   text-align: center;
-  font-weight: bold;
   margin: 0;
   color: #fff;
+  font-size: .8rem;
 `
 
 export default ()=> {
