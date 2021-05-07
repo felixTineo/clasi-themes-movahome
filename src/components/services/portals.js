@@ -64,11 +64,11 @@ export default ()=> {
     gsap.set(".box", {
       x: (i) => i * 200,
     });
-    const mod = gsap.utils.wrap(0, 200 * 24);
+    const mod = gsap.utils.wrap(0, 200 * 21);
     const tween = gsap.to(".box",{
       paused: true,
       duration: 120,
-      x: "-=" + (200 * 24),
+      x: "-=" + (200 * 21),
       ease: "linear",
       //paused: true,
       repeat: -1,

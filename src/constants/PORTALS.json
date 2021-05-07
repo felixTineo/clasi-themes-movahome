@@ -54,12 +54,6 @@
     "height": 47.12
   },  
   {
-    "src":"/mi-segunda-vivienda.png",
-    "id":"mi-segunda-vivienda",
-    "width": 109,
-    "height": 34    
-  },  
-  {
     "src":"/emol.png",
     "id":"emol",
     "width": 70,
@@ -72,12 +66,6 @@
     "height": 47.12 
   },    
   {
-    "src":"/acop.png",
-    "id":"acop",
-    "width": 96.71,
-    "height": 38.45
-  },  
-  {
     "src":"/chile-propiedades.png",
     "id":"chile-propiedades",
     "width": 153,
@@ -89,12 +77,6 @@
     "width": 122,
     "height": 44.68
   },
-  {
-    "src":"/twitter.png",
-    "id":"sticker-twitter",
-    "width": 75,
-    "height": 41.56
-  },  
   {
     "src":"/whatsapp.png",
     "id":"whatsapp",
