@@ -13,6 +13,7 @@ const SectionCustom = styled(Section)`
 `
 const Title = styled.h2`
   color: ${props => props.theme.secondaryColor};
+  margin: 1rem 0;
 `
 const Description = styled.p`
 
@@ -52,13 +53,13 @@ export default ()=> {
         <Row
           style={{
             border: "1px solid #d8d8d8",
-            padding: "2.5rem 3rem;",
+            padding: "0 .5rem",
             backgroundColor: "#fff",
             borderRadius: ".3rem"
           }}        
         >
           <Col xs={12} md={6}>
-            <Title>Complete el formulario y nos contactaremos a la brevedad</Title>
+            <Title>Trabaje con nosotros</Title>
             <ContactCont>
               <ContactList>
                 <ContactItem>
@@ -95,7 +96,8 @@ export default ()=> {
             <div
               style={{
                 border: "1px solid #d8d8d8",
-                borderRadius: ".3rem"
+                borderRadius: ".3rem",
+                marigin: "1.5rem 0"
               }}
             >
             {
@@ -111,6 +113,7 @@ export default ()=> {
             </div> 
           </Col>
           <Col xs={12} md={6}>
+            <Title>Complete el formulario y nos contactaremos a la brevedad</Title>
             <Form />
           </Col>          
         </Row>
