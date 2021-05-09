@@ -53,7 +53,7 @@ export default ()=> {
         <Row
           style={{
             border: "1px solid #d8d8d8",
-            padding: "0 .5rem",
+            padding: "0 .5rem 2rem",
             backgroundColor: "#fff",
             borderRadius: ".3rem"
           }}        

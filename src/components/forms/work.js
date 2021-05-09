@@ -16,7 +16,7 @@ const Title = styled.h2`
 `
 const ButtonCont = styled.footer`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 `
 
 export default ()=> {
@@ -103,7 +103,9 @@ export default ()=> {
       </Row>
       <br />
       <ButtonCont>
-        <Button type="submit" primary>Enviar</Button>
+        <div style={{ width: "50%" }}>
+          <Button block type="submit" primary>Enviar</Button>
+        </div>
       </ButtonCont>
     </Form>
   )
