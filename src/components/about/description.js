@@ -20,6 +20,7 @@ const InfoCont = styled.div`
   margin-right: auto;
   margin-left: auto;    
   padding-top: 1rem;  
+  font-size: .9rem;
   @media (min-width: 768px){
     max-width: 720px;
     padding: 2rem 15px;
@@ -42,7 +43,7 @@ export default ()=> {
     <SectionCustom>
       <Row noGutters>
         <Col xs={12} md={12} lg={6}>
-          <Image src={state.home.about.banner.image} />
+          <Image src={require("../../images/about.png")} />
         </Col>        
         <Col xs={12} md={12} lg={6}>
           <InfoCont>

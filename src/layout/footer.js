@@ -71,8 +71,9 @@ const SocialItem = styled.span`
 const SocialLink = styled.a`
   color: rgba(255, 255, 255, .5);
   margin-left: .5rem;
+  font-size: 1.3rem;
   &:hover{
-    color: ${props => props.theme.primaryColor};
+    color: #a99a62;
   }
 `
 const BackTop = styled.button`
@@ -192,7 +193,7 @@ export default ()=> {
                 <NavItem>
                   <Link to="/services">
                     <NavLink light>
-                      Servicos
+                      Servicios
                     </NavLink>
                   </Link>            
                 </NavItem>                                         
