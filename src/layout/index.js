@@ -181,8 +181,8 @@ export default ({ children, location }) => {
         const dataEval = formatData(JSON.parse(runtimeData.initial.data));
         console.log("DATA SIN FORMATO", JSON.parse(runtimeData.initial.data));
         const featuredProperties = await getFeatured(
-          //dataEval.officeId,
-          "5e8e36b31c9d440000d35090",
+          dataEval.officeId,
+          //"5e8e36b31c9d440000d35090",
           dataEval.typeId,
           dataEval.home.properties.maxProperties
         );

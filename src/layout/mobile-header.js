@@ -5,6 +5,7 @@ import HamburgerMenu from 'react-hamburger-menu';
 import { Container } from 'react-bootstrap';
 import Link from "../components/link";
 import { FacebookOutlined, InstagramOutlined, TwitterOutlined } from '@ant-design/icons';
+import { Dropdown, Menu } from 'antd';
 
 import Logo from './logo';
 import RateBar from './ratebar';
@@ -48,6 +49,34 @@ const NavList = styled.ul`
 const NavItem = styled.li`
   font-size: 2rem;
 `
+const MenuCustom = styled(Menu)`
+  background-color: ${props => props.theme.primaryColor};
+`
+const Item = styled(Menu.Item)`
+  color: #fff;
+  transition: 250ms ease;
+  &:hover{
+    background-color: transparent;
+    color: ${props => props.theme.secondaryColor};
+  }
+  a{
+    color: #fff;
+    &:hover{
+      color: ${props => props.theme.secondaryColor};
+    }
+  }
+`
+const menu = ({ onClick }) => (
+  <MenuCustom>
+    <Item>
+      <Link to="/services" onClick={onClick}>Nuestros servicios</Link>
+    </Item>
+    <Item>
+      <a href="/servicios.pdf" download>Mas información</a>
+    </Item>    
+  </MenuCustom>
+)
+
 
 export default ()=> {
   const [open, setOpen] = useState(false);
@@ -92,11 +121,13 @@ export default ()=> {
           </Link>
         </NavItem>
         <NavItem>
-          <Link to="/services" onClick={()=> setOpen(false)} >
-            <NavLink light>
-              Servicios
-            </NavLink>
-          </Link>
+        <Dropdown overlay={()=> menu({ onClick: ()=> setOpen(false) })} placement="bottomLeft">
+                <a onClick={e => e.preventDefault()}>
+                  <NavLink light>
+                    Servicios
+                  </NavLink>
+                </a>
+              </Dropdown>
         </NavItem>        
         <NavItem>
           <Link to="/confidence" onClick={()=> setOpen(false)} >

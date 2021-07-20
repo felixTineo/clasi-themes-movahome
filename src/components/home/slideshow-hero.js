@@ -106,7 +106,7 @@ export default ()=> {
             <Slide index={index}>
               <SlideImage src={item.src} alt={item.title} index={index}>
                 <TitleCont>
-                  <Container fluid>
+                  <Container>
                     <Title className="title">{item.title}</Title>
                     <SubTitle className="title">{item.subTitle}</SubTitle>
                   </Container>

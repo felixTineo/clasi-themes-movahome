@@ -2,8 +2,7 @@ import React, { useContext, useState, useReducer } from 'react';
 import context from '../../context';
 import styled from 'styled-components';
 import { Row, Col } from 'react-bootstrap';
-import PROPERTY_TYPE from '../../constants/PROPERTY_TYPE.json';
-import COMMUNES from '../../constants/CITIES.json';
+import { CheckCircleOutlined, LoadingOutlined } from '@ant-design/icons';
 
 import { Button } from '../../styled-components';
 import { Input, Select, Autocomplete, Textarea, Upload } from '../inputs';
@@ -20,19 +19,58 @@ const ButtonCont = styled.footer`
 `
 
 export default ()=> {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [values, setValues] = useReducer((current, next) => ({ ...current, ...next }), {
     name: "",
     email: "",
-    mobile: "",
+    phone: "",
     jobTitle: "",
     message: "",
-    commune: "",
-    images: [],
+    curriculum: [],
   });
 
-  const onSubmit = (e)=> {
+  const onSubmit = async(e)=> {
     e.preventDefault();
-    console.log(values);
+    setLoading(true);
+    let body = new FormData();
+    body.append("name", values.name);
+    body.append("email", values.email);
+    body.append("phone", values.phone);
+    body.append("jobTitle", values.jobTitle);
+    body.append("message", values.message);
+    body.append("curriculum", values.curriculum[0].originFileObj);
+    try{
+      const options = {
+        //headers: { "Content-type" : "application/json" },
+        method: "POST",
+        body,
+        //mode: "cors",
+      }
+      const data = await fetch('/sendcurriculum.php', options);
+      const result = await data.text();
+      setLoading(false);
+      if(result === 'success'){
+        setSuccess(true);
+        setTimeout(()=>{
+          setSuccess(false);
+          setValues({
+            name: "",
+            email: "",
+            phone: "",
+            jobTitle: "",
+            message: "",
+            curriculum: [],
+          })
+        }, 5000);
+      } else{
+        throw new Error('No puedo enviarse la propiedad');
+      }
+    }
+    catch(e){
+      setLoading(false);
+      console.log("ERROR CONFIENOS SU PROPIEDAD", e);
+    }
   }
 
   return(
@@ -47,6 +85,7 @@ export default ()=> {
             id="name"
             onChange={(e)=>setValues({ name: e.target.value })}
             value={values.name}
+            disabled={loading}
           />          
         </Col>
         <Col xs={12}>
@@ -58,6 +97,7 @@ export default ()=> {
             id="email"
             onChange={(e)=>setValues({ email: e.target.value })}
             value={values.email}
+            disabled={loading}
           />          
         </Col>
         <Col xs={12}>
@@ -65,10 +105,11 @@ export default ()=> {
             placeholder="Teléfono"
             gray
             withMargin
-            id="mobile"
+            id="phone"
             //disabled={loading}
-            onChange={(e)=>setValues({ mobile: e.target.value })}
-            value={values.mobile}
+            onChange={(e)=>setValues({ phone: e.target.value })}
+            value={values.phone}
+            disabled={loading}
           />          
         </Col>      
         <Col xs={12}>
@@ -80,6 +121,7 @@ export default ()=> {
             capitalize
             onChange={(e)=>setValues({ jobTitle: e.target.value })}
             value={values.jobTitle}          
+            disabled={loading}
           />           
         </Col>
         <Col xs={12}>
@@ -91,20 +133,33 @@ export default ()=> {
             withMargin
             //disabled={loading} 
             onChange={(e)=>setValues({ message: e.target.value })}
-            value={values.message}                                   
+            value={values.message}    
+            disabled={loading}                               
           />          
         </Col>       
         <Col xs={12}>
           <Upload
             handleChange={setValues}
             type="curriculum"
+            limit={1}
+            value="curriculum"
+            disabled={loading}
+            fileList={values.curriculum}
           />          
         </Col>        
       </Row>
       <br />
       <ButtonCont>
         <div style={{ width: "50%" }}>
-          <Button block type="submit" primary>Enviar</Button>
+          <Button block type="submit" primary>
+            Enviar
+            {
+          loading && <LoadingOutlined style={{ marginLeft: ".5rem" }} spin />
+        }
+        {
+          success && <CheckCircleOutlined style={{ marginLeft: ".5rem" }} />
+        }                
+          </Button>
         </div>
       </ButtonCont>
     </Form>

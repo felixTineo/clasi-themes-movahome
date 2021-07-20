@@ -14,8 +14,8 @@ const FormCont = styled.div`
   position: absolute;
   top: calc((-235.78px / 2) - 25px);
   opacity: .9;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  //margin-left: 3rem;
+  //margin-right: 3rem;
   border-radius: .3rem;
 `
 
@@ -38,7 +38,7 @@ const SearchTitle = styled.div`
 export default ()=> {
 
   return(
-    <Container style={{ padding: 0 }} fluid>
+    <Container style={{ padding: 0 }}>
     <SectionCustom>
         <FormCont>
           <SearchTitle>

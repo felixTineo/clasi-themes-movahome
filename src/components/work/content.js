@@ -11,6 +11,11 @@ import Form from '../forms/work';
 const SectionCustom = styled(Section)`
 
 `
+const InnerCont = styled.div`
+  background-color: #fff;
+  padding: 3rem;
+  border: 1px solid #d8d8d8;  
+`
 const Title = styled.h2`
   color: ${props => props.theme.secondaryColor};
   margin: 1rem 0;
@@ -50,14 +55,8 @@ export default ()=> {
   return(
     <SectionCustom>
       <Container>
-        <Row
-          style={{
-            border: "1px solid #d8d8d8",
-            padding: "0 .5rem 2rem",
-            backgroundColor: "#fff",
-            borderRadius: ".3rem"
-          }}        
-        >
+        <InnerCont>
+        <Row>
           <Col xs={12} md={6}>
             <Title>Trabaje con nosotros</Title>
             <ContactCont>
@@ -117,6 +116,7 @@ export default ()=> {
             <Form />
           </Col>          
         </Row>
+        </InnerCont>
       </Container>
     </SectionCustom>
   )

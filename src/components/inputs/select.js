@@ -43,6 +43,10 @@ const Select = styled.select`
   &::-ms-expand{
     background: transparent;
   }  
+  &:disabled{
+    background-color: #E5E5E5 !important;
+    cursor: not-allowed;
+  }
   @media(min-width: 768px){
     //margin-bottom: 0;
     box-shadow: ${props => props.shadow ? "0px 0px 1px rgba(0, 0, 0, .12), 0px 0px 2px rgba(0, 0, 0, .12), 0px 4px 4px rgba(0, 0, 0, .12), 0px 8px 8px rgba(0, 0, 0, .12)" : "none"};

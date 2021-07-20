@@ -142,7 +142,7 @@ export default () => {
   if (query.loading)
     return (
       <MainCont>
-        <Container fluid>
+        <Container>
           <InnerCont>
             <ContactCont>¿Necesitas ayuda? contactanos</ContactCont>
             <RatesCont>
@@ -174,7 +174,7 @@ export default () => {
 
   return (
     <MainCont>
-      <Container fluid>
+      <Container>
         <InnerCont>
           <ContactCont>
             ¿Necesitas ayuda? contactanos{" "}

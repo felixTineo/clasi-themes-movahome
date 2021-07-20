@@ -4,12 +4,13 @@ import styled from 'styled-components';
 import { Row, Col } from 'react-bootstrap';
 import PROPERTY_TYPE from '../../constants/PROPERTY_TYPE.json';
 import COMMUNES from '../../constants/CITIES.json';
+import { CheckCircleOutlined, LoadingOutlined } from '@ant-design/icons';
 
 import { Button } from '../../styled-components';
 import { Input, Select, Autocomplete, Textarea, Upload } from '../inputs';
 
 const Form = styled.form` 
-  
+
 `
 const Title = styled.h2`
   color: ${props => props.theme.secondaryColor};
@@ -22,6 +23,8 @@ const ButtonCont = styled.footer`
 `
 
 export default ()=> {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [values, setValues] = useReducer((current, next) => ({ ...current, ...next }), {
     name: "",
     email: "",
@@ -35,36 +38,52 @@ export default ()=> {
 
   const onSubmit = async(e)=> {
     e.preventDefault();
-    /*try{
-      const options = {
-        headers: { "Content-type" : "application/json" },
-        method: "POST",
-        body: JSON.stringify(values),
-        mode: "cors",
-      }
+    setLoading(true);
+    let body = new FormData();
+    body.append("name", values.name);
+    body.append("email", values.email);
+    body.append("phone", values.phone);
+    body.append("operation", values.operation);
+    body.append("propertyType", values.propertyType);
+    body.append("observations", values.observations);
+    body.append("commune", values.commune);
+    for(const image of values.images){
+      body.append('images[]', image.originFileObj);
+    }
 
-      const data = await fetch("/sendproperty.php", options);
-      const result = await data.text();
-      console.log("RESULT SENDMAIL", result);
-      if(result === "success"){
-        console.log("MAIL API RESULT", result);
-        setLoading(false);
-        setSuccess(true);
-        setTimeout(()=> {
-          setSuccess(false);
-        }, 5000);
-        setValues({
-          name: '',
-          phone: '',
-          email: '',
-          message: '',          
-        })                      
+    try{
+      const options = {
+        //headers: { "Content-type" : "application/json" },
+        method: "POST",
+        body,
+        //mode: "cors",
       }
+      const data = await fetch('/sendproperty.php', options);
+      const result = await data.text();
       setLoading(false);
-    }catch(e){
+      if(result === 'success'){
+        setSuccess(true);
+        setTimeout(()=>{
+          setSuccess(false);
+          setValues({
+            name: "",
+            email: "",
+            phone: "",
+            operation: "",
+            propertyType: "",
+            observations: "",
+            commune: "",
+            images: [],
+          })
+        }, 5000);
+      } else{
+        throw new Error('No puedo enviarse la propiedad');
+      }
+    }
+    catch(e){
       setLoading(false);
-      console.log("error", e);
-    }*/
+      console.log("ERROR CONFIENOS SU PROPIEDAD", e);
+    }
   }
 
   return(
@@ -82,6 +101,7 @@ export default ()=> {
             id="name"
             onChange={(e)=>setValues({ name: e.target.value })}
             value={values.name}
+            disabled={loading}
           />          
         </Col>
         <Col xs={12}>
@@ -93,6 +113,7 @@ export default ()=> {
             id="email"
             onChange={(e)=>setValues({ email: e.target.value })}
             value={values.email}
+            disabled={loading}
           />          
         </Col>
         <Col xs={12}>
@@ -104,6 +125,7 @@ export default ()=> {
             //disabled={loading}
             onChange={(e)=>setValues({ phone: e.target.value })}
             value={values.phone}
+            disabled={loading}
           />          
         </Col>      
         <Col xs={12}>
@@ -114,7 +136,8 @@ export default ()=> {
             primary
             capitalize
             onChange={(e)=>setValues({ operation: e.target.value })}
-            value={values.operation}          
+            value={values.operation}     
+            disabled={loading}     
           />           
         </Col>
         <Col xs={12}>
@@ -125,7 +148,8 @@ export default ()=> {
             primary
             capitalize
             onChange={(e)=>setValues({ propertyType: e.target.value })}
-            value={values.propertyType}          
+            value={values.propertyType}     
+            disabled={loading}     
           />           
         </Col>
         <Col xs={12}>
@@ -135,6 +159,7 @@ export default ()=> {
             selected={values.commune}
             options={COMMUNES.map(val => val.name)}
             placeholder="Comuna"
+            disabled={loading}
           />              
         </Col>        
         <Col xs={12}>
@@ -144,7 +169,7 @@ export default ()=> {
             placeholder="Observaciones"
             gray   
             withMargin
-            //disabled={loading} 
+            disabled={loading} 
             onChange={(e)=>setValues({ observations: e.target.value })}
             value={values.observations}                                   
           />          
@@ -153,12 +178,24 @@ export default ()=> {
           <Upload
             handleChange={setValues}
             type="imagen"
+            disabled={loading}
+            limit={8}
+            value="images"
+            fileList={values.images}
           />          
         </Col>        
       </Row>
       <br />
       <ButtonCont>
-        <Button type="submit" primary>Enviar</Button>
+        <Button disabled={loading} type="submit" primary>
+          Enviar
+          {
+          loading && <LoadingOutlined style={{ marginLeft: ".5rem" }} spin />
+        }
+        {
+          success && <CheckCircleOutlined style={{ marginLeft: ".5rem" }} />
+        }          
+        </Button>
       </ButtonCont>
     </Form>
   )

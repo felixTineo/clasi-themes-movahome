@@ -35,6 +35,10 @@ const Input = styled.input`
   border: none;
   font-size: 1rem;
   color: ${props => props.primary ? props.theme.primaryColor : "#878787"};
+  &:disabled{
+    background-color: #E5E5E5;
+    cursor: not-allowed;
+  }
   &::placeholder{
     color: ${props => props.gray ? "#8695A1" : "#5a5a5a"};
   } 
@@ -88,7 +92,7 @@ const PropertyInfoDescription = styled.span`
 `
 
 
-export default ({ selected, onSelect, id, placeholder, options, gray, shadow, primary, icon }) => {
+export default ({ selected, onSelect, id, placeholder, options, gray, shadow, primary, icon, disabled }) => {
   const contextData = useContext(context);
   const [value, setValue] = useState(selected)
   const [state, setState] = useReducer((current, next) => ({ ...current, ...next }),{
@@ -151,6 +155,7 @@ export default ({ selected, onSelect, id, placeholder, options, gray, shadow, pr
         gray
         autoComplete="off"
         primary={primary}
+        disabled={disabled}
       />
       {console.log("NO ICON", icon)}
       {

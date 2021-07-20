@@ -40,15 +40,15 @@
         
         $mail->isSMTP();                     
         //$mail->Host = 'c2120007.ferozo.com';  
-        $mail->Host = 'smtp.gmail.com';  
+        $mail->Host = 'mail.movahome.cl';  
         $mail->SMTPAuth = true;                
-        $mail->Username = 'clasihomemailer@gmail.com';
-        $mail->Password = '18417052=Felix!';                
+        $mail->Username = 'contacto@movahome.cl';
+        $mail->Password = 'Propiedades2021';                
         $mail->SMTPSecure = 'ssl';                            
-        $mail->Port = 465;          
+        $mail->Port = 465;
         
-        $mail->SetFrom( $email , 'Un cliente quiere contactar con propiedadesmyc.cl' );
-        $mail->addAddress( "felixtineo05@gmail.com", 'Mensaje desde la web');   
+        $mail->SetFrom( $email , 'Un cliente quiere contactar con movahome.cl' );
+        $mail->addAddress( "contacto@movahome.cl", 'Mensaje desde la web');   
         $mail->isHTML(true);                                 
         $mail->Subject = $subject;
         $body = "$mensajeCompleto";

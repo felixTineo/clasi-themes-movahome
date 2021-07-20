@@ -11,12 +11,11 @@ function getBase64(file) {
   });
 };
 
-export default ({ handleChange, type })=> {
+export default ({ handleChange, type, disabled, limit, value, fileList })=> {
   const [state, setState] = useReducer((current, next) => ({ ...current, ...next }), {
     previewVisible: false,
     previewImage: '',
     previewTitle: '',
-    fileList: [],  
   });
 
   const handleCancel = () => setState({ previewVisible: false });
@@ -34,13 +33,13 @@ export default ({ handleChange, type })=> {
   };
 
   const onChange = ({ fileList }) => {
-    console.log(fileList);
-    setState({ fileList: fileList.map(item => { item.status = "done"; return item }) });
-    const urls = fileList.map(item => item.originFileObj);
-    handleChange({ images: urls });
+    //console.log(fileList);
+    //setState({ fileList: fileList.map(item => { item.status = "done"; return item }) });
+    //const urls = fileList.map(item => item.originFileObj);
+    handleChange({ [value]: fileList.map(item => { item.status = "done"; return item }) });
   };
 
-  const { previewVisible, previewImage, fileList, previewTitle } = state;
+  const { previewVisible, previewImage, previewTitle } = state;
 
   return(
     <Fragment>
@@ -50,9 +49,10 @@ export default ({ handleChange, type })=> {
           fileList={fileList}
           onPreview={handlePreview}
           onChange={onChange}
+          disabled={disabled}
         >
           {
-            fileList.length >= 8 
+            fileList.length >= limit
             ? null 
             : (
             <div>
