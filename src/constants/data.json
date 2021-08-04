@@ -9,7 +9,7 @@
   "twitter": "https://twitter.com",
   "instagram": "https://instagram.com",
   "favicon": "",
-  "footerText": "Somos una empresa con mas de 20 años en el rubro del corretaje inmobiliario",
+  "footerText": "",
   "lat": "-33.410167",
   "lng": "-70.655265",
   "logo": "",
@@ -114,19 +114,19 @@
           "phone": "+56 9 5555 5555"
         },
         {
-            "avatar": "",
-            "cv": "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca, Mesa de Dinero. 6 años en el corretaje de propiedades, especializado en el manejo de cartera de propiedades. ",
-            "email": "usuario2@example.com",
-            "fullName": "Usuario 2",
-            "phone": "+56 9 5555 5555"
-          },
-          {
-            "avatar": "",
-            "cv": "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca, Mesa de Dinero. 6 años en el corretaje de propiedades, especializado en el manejo de cartera de propiedades. ",
-            "email": "usuario3@example.com",
-            "fullName": "Usuario 3",
-            "phone": "+56 9 5555 5555"
-          }                  
+          "avatar": "",
+          "cv": "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca, Mesa de Dinero. 6 años en el corretaje de propiedades, especializado en el manejo de cartera de propiedades. ",
+          "email": "usuario2@example.com",
+          "fullName": "Usuario 2",
+          "phone": "+56 9 5555 5555"
+        },
+        {
+          "avatar": "",
+          "cv": "Ingeniero Comercial, Master en Finanzas. Inversor inmobiliario, con 6 años de experiencia en Banca, Mesa de Dinero. 6 años en el corretaje de propiedades, especializado en el manejo de cartera de propiedades. ",
+          "email": "usuario3@example.com",
+          "fullName": "Usuario 3",
+          "phone": "+56 9 5555 5555"
+        }
       ]
     },
     "ubication": {

@@ -21,9 +21,7 @@ export default (data) => {
       : require("../images/logo-dark.png"),
     movil: data.movil ? data.movil : "+56 9 1234 1234",
     phone: data.phone ? data.phone : "+56 2 1234 1234",
-    footerText: data.footerText
-      ? data.footerText
-      : "Somos una empresa con mas de 20 años en el rubro del corretaje inmobiliario",
+    footerText: data.footerText ? data.footerText : "",
     home: {
       hero: {
         background:
