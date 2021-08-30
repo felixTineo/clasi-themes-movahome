@@ -138,7 +138,7 @@ export default () => {
 
       const data = await fetch("/sendmail.php", options);
       const result = await data.text();
-
+      console.log("MAIL API RESULT without if", result);
       if (result === "success") {
         console.log("MAIL API RESULT", result);
         setLoading(false);

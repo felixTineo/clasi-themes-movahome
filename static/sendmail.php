@@ -16,7 +16,6 @@
     $mail = new PHPMailer(true);
 
     try{
-        var_dump($_POST);
         $subject = isset( $_POST['subject']) ? $_POST['subject'] : 'contacto';
         $name = isset( $_POST['name'] ) ? $_POST['name'] : '';
         $mobile = isset( $_POST['mobile'] ) ? $_POST['mobile'] : '';
