@@ -9,6 +9,7 @@ import { Section } from '../../styled-components';
 const SectionCustom = styled(Section)`  
   margin-bottom: 0;
   position: relative;
+  z-index: 2;
 `
 const FormCont = styled.div`
   position: absolute;
@@ -25,7 +26,7 @@ const Title = styled.h2`
 const SearchTitle = styled.div`
   color: ${props => props.theme.secondaryColor};
   border-radius: .3rem;
-  background-color: #2e2e2e;
+  background-color: ${props => props.theme.primaryColor};
   padding: .8rem 1rem;
   display: flex;
   align-items: center;

@@ -107,49 +107,47 @@ export default ()=> {
       <RateBar />
       <NavList>
         <NavItem>
-          <Link to="/about" onClick={()=> setOpen(false)} >
+          <Link to="/" onClick={()=> setOpen(false)} >
             <NavLink light>
-              Nosotros
+              Inicio
             </NavLink>
           </Link>
         </NavItem>        
         <NavItem>
-          <Link to="/properties" onClick={()=> setOpen(false)} >
+          <Link to="/properties/?status=PUBLICADA,ARRENDADA,VENDIDA&limit=12&typeId=office&id=5e8e36b31c9d440000d35090&propertyType=&operation=VENTA&commune=&stringSearch=&priceMin=&priceMax=&totalAreaFrom=&totalAreaTo=&bedrooms=&bathrooms=&currency=CLP" onClick={()=> setOpen(false)} >
             <NavLink light>
-              Propiedades
+              Venta
             </NavLink>
           </Link>
         </NavItem>
         <NavItem>
-        <Dropdown overlay={()=> menu({ onClick: ()=> setOpen(false) })} placement="bottomLeft">
-                <a onClick={e => e.preventDefault()}>
-                  <NavLink light>
-                    Servicios
-                  </NavLink>
-                </a>
-              </Dropdown>
-        </NavItem>        
-        <NavItem>
-          <Link to="/confidence" onClick={()=> setOpen(false)} >
+          <Link to="/properties/?status=PUBLICADA,ARRENDADA,VENDIDA&limit=12&typeId=office&id=5e8e36b31c9d440000d35090&propertyType=&operation=ARRIENDO&commune=&stringSearch=&priceMin=&priceMax=&totalAreaFrom=&totalAreaTo=&bedrooms=&bathrooms=&currency=CLP" onClick={()=> setOpen(false)} >
             <NavLink light>
-              Confienos su propiedad
+              Arriendo
             </NavLink>
           </Link>
-        </NavItem>        
+        </NavItem>         
+        {/* <NavItem>
+          <Link to="/map" onClick={()=> setOpen(false)} >
+            <NavLink light>
+              Mapa
+            </NavLink>
+          </Link>
+        </NavItem>         */}
+        <NavItem>
+          <Link to="/partners" onClick={()=> setOpen(false)} >
+            <NavLink light>
+              Asociados
+            </NavLink>
+          </Link>
+        </NavItem>              
         <NavItem>
           <Link to="/contact" onClick={()=> setOpen(false)} >
             <NavLink light>
               Contacto
             </NavLink>
           </Link>
-        </NavItem>                
-        <NavItem>
-          <Link to="/work" onClick={()=> setOpen(false)} >
-            <NavLink light>
-              ¡Trabaje con nosotros!
-            </NavLink>
-          </Link>
-        </NavItem>                        
+        </NavItem>                                       
       </NavList>
       <NavList horizontal>
         <NavItem>

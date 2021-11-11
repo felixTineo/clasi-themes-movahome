@@ -24,11 +24,11 @@ export default ()=> {
       <Hero />
       <Search />
       <Container style={{ padding: 0 }}>
-        <BorderCont>
+        {/* <BorderCont> */}
           <OfferProperties />
           <Properties />
           <OfficeInfo />
-        </BorderCont>
+        {/* </BorderCont> */}
       </Container>
 {/*      <About />
       <OfficeInfo />

@@ -3,8 +3,8 @@ export default (data) => {
     builderId: data._id ? data._id : "5fb2a5f3ea262c2e14e462ad",
     typeId: data.user ? "user" : "office",
     officeId: data.user ? data.user : data.office,
-    primaryColor: data.primaryColor ? data.primaryColor : "#dc314f",
-    secondaryColor: "#a99a62",
+    primaryColor: data.primaryColor ? data.primaryColor : "#101825",
+    secondaryColor: "#fff",
     address: data.address
       ? data.address
       : "chile, santiago. Av 1 calle 2 local 1a",
@@ -12,7 +12,7 @@ export default (data) => {
     facebook: data.facebook ? data.facebook : "https://facebook.com",
     twitter: data.twitter ? data.twitter : "https://twitter.com",
     instagram: data.instagram ? data.instagram : "https://instagram.com",
-    favicon: data.favicon ? data.favicon : require("../images/icon.png"),
+    favicon: data.favicon ? data.favicon : require("../images/favicon.ico"),
     lat: data.lat ? data.lat : "-33.410167",
     lng: data.lng ? data.lng : "-70.655265",
     logo: data.logo ? data.logo : require("../images/logo-light.png"),

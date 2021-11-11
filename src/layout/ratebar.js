@@ -8,7 +8,7 @@ const MainCont = styled.div`
   padding: 0;
   user-select: none;
   background-color: transparent;
-  color: #a99a62;
+  color: #fff;
   font-size: 1rem;
   @media (min-width: 992px) {
     font-size: 0.7rem;

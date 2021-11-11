@@ -61,7 +61,7 @@ const Operation = styled.p`
   margin: 0;
   padding: .8rem 1rem; 
     font-size: .8rem;
-  background-color: ${props => props.theme.secondaryColor};
+  background-color: ${props => props.theme.primaryColor};
   color: #fff;
   position: absolute;
   bottom: 0;
@@ -81,7 +81,7 @@ const Public = styled.p`
 const PriceCont = styled.div`
   padding: .8rem 1rem; 
   font-size: .8rem;
-  background-color: ${props => props.theme.secondaryColor};
+  background-color: ${props => props.theme.primaryColor};
   color: #fff;
   display: flex;
   align-items: center;

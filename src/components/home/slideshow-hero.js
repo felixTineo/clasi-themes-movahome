@@ -7,7 +7,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 const SLIDERS = [
   {
     id: "slide-1",
-    title: "Bienvenidos a Movahome",
+    title: "Bienvenidos a Open brokers",
     subTitle: "la propiedad que buscas está más cerca de que lo que crees.",
     src: require("../../images/slide-1.jpg"),
   },
@@ -20,7 +20,7 @@ const SLIDERS = [
   {
     id: "slide-3",
     title: "Únete a este gran equipo",
-    subTitle: "logra tus objetivos junto a Movahome.",
+    subTitle: "logra tus objetivos junto a Open brokers.",
     src: require("../../images/slide-3.jpg"),
   },
 ];

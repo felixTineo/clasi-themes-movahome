@@ -11,9 +11,9 @@ import Carousel from "../carousels/offer-properties";
 const SectionCustom = styled(Section)`
   margin: 2rem 0;
   padding-top: 30rem;
-  z-index: -1;
+  z-index: 1;
   @media (min-width: 768px) {
-    z-index: -1;
+    z-index: 1;
     padding-top: 5rem;
   }
 `;
@@ -45,7 +45,7 @@ export default () => {
 
   return (
     <SectionCustom id='properties'>
-      <Title>Movahome - Ofertas</Title>
+      <Title>Propiedades destacadas</Title>
       <PropertiesCarouselCont>
         <Carousel />
       </PropertiesCarouselCont>

@@ -76,7 +76,6 @@ export default ()=>{
   const items = state.featuredProperties;
   const chunkedItemsDesktop = chunkArray(items.map(item => item), 4);
   const chunkedItemsTablet = chunkArray(items.map(item => item), 3);
-  console.log(items);
   return(
     <Fragment>
       <CarouselProvider

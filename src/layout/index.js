@@ -150,7 +150,7 @@ export default ({ children, location }) => {
     try {
       const data = await fetch(
         //`https://api.clasihome.com/rest/properties?id=${id}&typeId=${typeId}&status=PUBLICADA&limit=${maxProperties}&integration=WEB&featured=true`
-        `https://api.clasihome.com/rest/properties?id=${id}&typeId=${typeId}&status=PUBLICADA&integration=WEB&featured=true`
+        `https://api.clasihome.com/rest/properties?id=${id}&typeId=${typeId}&status=PUBLICADA&featured=true&limit=12`
       );
       //const data = await fetch(`https://api.clasihome.com/rest/properties?id=${id}&typeId=${typeId}&status=PUBLICADA&limit=${maxProperties}`);
       const result = await data.json();
@@ -163,7 +163,7 @@ export default ({ children, location }) => {
   const getProperties = async (id, typeId, maxProperties) => {
     try {
       const data = await fetch(
-        `https://api.clasihome.com/rest/properties?id=${id}&typeId=${typeId}&status=PUBLICADA&integration=WEB&&limit=12`
+        `https://api.clasihome.com/rest/properties?id=${id}&typeId=${typeId}&status=PUBLICADA&limit=12`
       );
       const result = await data.json();
       return result;
@@ -210,14 +210,20 @@ export default ({ children, location }) => {
         console.log("PREVIEW DATA");
         setData({ loading: false, data: dataEval });
       } else {
-        console.log("NO DATA", dataEval);
+        console.log("NO DATA");
         const dataEval = formatData({ office: "5e8e36b31c9d440000d35090" });
         const featuredProperties = await getFeatured(
           dataEval.officeId,
           dataEval.typeId,
           dataEval.home.properties.maxProperties
         );
+        const properties = await getProperties(
+          dataEval.officeId,
+          dataEval.typeId,
+          dataEval.home.properties.maxProperties
+        );        
         dataEval.featuredProperties = featuredProperties.properties;
+        dataEval.properties = properties.properties;        
         setData({ loading: false, data: dataEval });
       }
     } catch (e) {
@@ -251,14 +257,14 @@ export default ({ children, location }) => {
             />
             <meta
               name="keywords"
-              content="movahome, inmobiliaria chile, movahome propiedades, propiedades chile"
+              content="Open brokers, inmobiliaria chile, Open brokers propiedades, propiedades chile"
             />
-            <title>Movahome | la propiedad que buscas está más cerca de que lo que crees.</title>
+            <title>Open brokers | la propiedad que buscas está más cerca de que lo que crees.</title>
             <link rel="canonical" href="https://clasihome.com/" />
             <meta property="og:url" content="https://clasihome.com/" />
             <meta
               property="og:title"
-              content="Movahome | la propiedad que buscas está más cerca de que lo que crees."
+              content="Open brokers | la propiedad que buscas está más cerca de que lo que crees."
             />
             <meta
               property="og:description"

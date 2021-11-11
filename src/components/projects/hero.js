@@ -29,7 +29,7 @@ export default () => {
       <Container>
         <Row>
           <Col xs={12} md={6}>
-            <Title>ASOCIADOS</Title>
+            <Title>PROYECTOS</Title>
           </Col>
         </Row>
       </Container>

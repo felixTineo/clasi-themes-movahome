@@ -8,6 +8,8 @@ import ServiceCarousel from '../carousels/services';
 import ReviewsCarousel from '../carousels/reviews';
 import { ClasiQuote } from '../../icons';
 
+import Rail from '../services/portals';
+
 const Title = styled.h2`
   color: ${props => props.theme.primaryColor};
   margin-bottom: 4rem;
@@ -56,11 +58,13 @@ export default ()=>{
       <Container>
         <Row>
           <Col xs={12}>
-            <Title>Ofrecemos un servicio ajustado a las necesidades de cada cliente</Title>  
-            <Services>
-              <ServiceCarousel />
-            </Services>
+            <Title>Corredores asociados</Title>
           </Col>
+        </Row>
+      </Container>
+      <Rail />
+      <Container>
+        <Row>
           <Col xs={12}>
             <ButtonCont>
               <Link to="/services">

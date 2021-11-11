@@ -1,0 +1,67 @@
+[
+  {
+    "id": "138",
+    "mainImage": "/138a.jpg",
+    "title": "A 3 MINUTOS DE PLAZA DE ISLA DE MAIPO",
+    "description": "Condominio Doña Inés",
+    "currency": "UF",
+    "operation": "Venta",
+    "propertyType": "CASA",
+    "value": "4.200,00",
+    "m2": "90/300m2",
+    "bedrooms": "4",
+    "bathrooms": "3"
+  },
+  {
+    "id": "66",
+    "mainImage": "/66a.jpg",
+    "title": "CALLE LIBERTADORES A 3 MINUTOS DE AUTOPISTA DEL SOL",
+    "description": "Casas 100% sólidas de un piso excelentes terminaciones finas emplazadas en condominio privado de solo 30 casas A solo minutos de autopista del sol 54 m2 construidos aprox en amplios terrenos de 145m2 aproximados!! (RENTA EXIGIDA desde $1.000.000-, la que puedes complementar entre 2 personas ambas desde $700.000) Casa cuenta con amplios espacios distribuidos en: Living comedor con",
+    "currency": "UF",
+    "operation": "Venta",
+    "propertyType": "CASA",
+    "value": "2.600,00",
+    "m2": "54/150m2",
+    "bedrooms": "3",
+    "bathrooms": "1"
+  },
+  {
+    "id": "95",
+    "mainImage": "/95a.jpg",
+    "title": "AVENIDA BERNARDO OHIGGINS, A 7 MINUTOS DE AUTOPISTA DEL SOL",
+    "description": "ESPECTACULARES DEPARTAMENTOS MODERNOS FULL EQUIPADOS CON ESTACIONAMIENTO Y BODEGA UNCLUIDO Cuentan con 3 dormitorios con clóset 1 baño Excelente distribución Cocina Full equipada con encimera, horno, campana y muebles de cocina Pequeña logia con conexión a lavadora y termo para agua caliente ahorro de energía Terraza de extremo extremo con hermosa vista natural",
+    "currency": "UF",
+    "operation": "Venta",
+    "propertyType": "DEPT",
+    "value": "2.400,00",
+    "m2": "56/56m2",
+    "bedrooms": "3",
+    "bathrooms": "1"
+  },
+  {
+    "id": "162",
+    "mainImage": "/162a.jpg",
+    "title": "FRENTE A HOSPITAL DE TALAGANTE",
+    "description": "Oficina Arenas Talagante",
+    "currency": "UF",
+    "operation": "Venta-CA-COM",
+    "propertyType": "DEPT",
+    "value": "1.888,00",
+    "m2": "29/60m2",
+    "bedrooms": "3",
+    "bathrooms": "1"
+  },  
+  {
+    "id": "140",
+    "mainImage": "/140a.jpg",
+    "title": "SECTOR MONTE VERDE, COLONIA EL GATO,",
+    "description": "VENTA DE PARCELAS SECTOR MONTEVERDE - COLONIA EL GATO Región de Los Lagos Puerto Montt. Parcelas desde $31.000.000 a 25 minutos de Puerto Montt por Ruta 5 Sur. Reserva por el 10% del valor *Rol Propio *Agua en cada parcela *Empalme eléctrico habilitado *Portón y camino de acceso *Parcelas planas con vegetación nativa *Dos rutas de acceso: Ruta 5 Sur y Ruta Aeropuerto El Tepual",
+    "currency": "UF",
+    "operation": "Venta-PARC",
+    "propertyType": "DEPT",
+    "value": "36.000.000",
+    "m2": "5.000/5.000m2",
+    "bedrooms": null,
+    "bathrooms": null
+  }  
+]

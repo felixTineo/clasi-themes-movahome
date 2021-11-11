@@ -79,58 +79,61 @@ export default ({ dark, location }) => {
           </Link>
           <NavList horizontal>
             <NavItem>
-              <Link to='/about'>
+              <Link to='/'>
                 <NavLink
-                  active={location === "/about"}
+                  active={location === "/"}
                   dark={dark}
                   light={!dark}
                   first
                 >
-                  Nosotros
+                  Inicio
                 </NavLink>
               </Link>
             </NavItem>
             <NavItem>
-              <Link to='/properties'>
+              <Link to='/properties/?status=PUBLICADA,ARRENDADA,VENDIDA&limit=12&typeId=office&id=5e8e36b31c9d440000d35090&propertyType=&operation=VENTA&commune=&stringSearch=&priceMin=&priceMax=&totalAreaFrom=&totalAreaTo=&bedrooms=&bathrooms=&currency=CLP'>
                 <NavLink
                   active={location === "/properties"}
                   dark={dark}
                   light={!dark}
                 >
-                  Propiedades
+                  Venta
                 </NavLink>
               </Link>
             </NavItem>
             <NavItem>
-              <Link to='/services'>
+              <Link to='/properties/?status=PUBLICADA,ARRENDADA,VENDIDA&limit=12&typeId=office&id=5e8e36b31c9d440000d35090&propertyType=&operation=ARRIENDO&commune=&stringSearch=&priceMin=&priceMax=&totalAreaFrom=&totalAreaTo=&bedrooms=&bathrooms=&currency=CLP'>
                 <NavLink
-                  active={location === "/services"}
+                  active={location === "/properties"}
                   dark={dark}
                   light={!dark}
                 >
-                  Servicios
+                  Arriendo
                 </NavLink>
               </Link>
-
-              {/*       <Dropdown overlay={menu} placement="bottomLeft">
-                <a onClick={e => e.preventDefault()}>
-                  <NavLink active={location === "/services"} dark={dark} light={!dark}>
-                    Servicios
-                  </NavLink>
-                </a>
-              </Dropdown> */}
             </NavItem>
             <NavItem>
-              <Link to='/confidence'>
+              <Link to='/projects'>
                 <NavLink
-                  active={location === "/confidence"}
+                  active={location === "/projects"}
                   dark={dark}
                   light={!dark}
                 >
-                  Confienos su propiedad
+                  Proyectos
                 </NavLink>
               </Link>
             </NavItem>
+            <NavItem>
+              <Link to='/partners'>
+                <NavLink
+                  active={location === "/partners"}
+                  dark={dark}
+                  light={!dark}
+                >
+                  Asociados
+                </NavLink>
+              </Link>
+            </NavItem>            
             <NavItem>
               <Link to='/contact'>
                 <NavLink
@@ -139,17 +142,6 @@ export default ({ dark, location }) => {
                   light={!dark}
                 >
                   Contacto
-                </NavLink>
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link to='/work'>
-                <NavLink
-                  active={location === "/work"}
-                  dark={dark}
-                  light={!dark}
-                >
-                  ¡Trabaje con nosotros!
                 </NavLink>
               </Link>
             </NavItem>

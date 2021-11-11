@@ -3,21 +3,22 @@ import styled from 'styled-components';
 import { gsap } from "gsap";
 import { Container } from 'react-bootstrap';
 import { v1 as uuid } from 'uuid';
-import PORTALS from '../../constants/PORTALS.json';
+import PORTALS from '../../constants/CORREDORAS.json';
 
 const VeryMainCont = styled.section`
   //margin-top: 6rem;  
-  margin: 4rem 0;
-  background-color: #fff;
-  padding: 2rem 0;
+  margin-bottom: 4rem;
+  background-color: #f2f2f2;
+  //padding: 2rem 0;
 `
 const MainCont = styled.div`
   display: flex;
   position: relative;
   left: -200px;
-  width: calc(100% + 200px);
-  padding: 3rem 0;
+  width: calc(100vw + 200px);
+  //padding: 3rem 0;
   overflow: hidden;
+  height: 200px;
 `
 
 const Box = styled.div`
@@ -34,12 +35,13 @@ const Box = styled.div`
   flex-shrink: 0;
   position: absolute;
   top: 0;
-  //padding: 0 3rem;
+  padding: 0 1.5rem;
   //padding-top: 2rem;
 `
 const Logo = styled.img`
   object-fit: contain;
   object-position: center;
+  width: 100%;
   //filter: grayscale(1);
 `
 const Title = styled.h2`
@@ -86,7 +88,12 @@ export default ()=> {
       {
         PORTALS.map((item, i) => (
           <Box key={uuid()} className="box">
-            <Logo width={item.width} height={item.height} src={item.src} alt={item.id} />
+            <Logo
+              //width={item.width}
+              //height={item.height}
+              src={item.src}
+              alt={item.id}
+            />
           </Box>          
         ))
       }
